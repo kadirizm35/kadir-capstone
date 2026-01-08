@@ -439,15 +439,15 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 cd /home/ubuntu/
-TOKEN=$(aws --region=us-east-1 ssm get-parameter --name /betul/capstone/token --with-decryption --query 'Parameter.Value' --output text)
+TOKEN=$(aws --region=us-east-1 ssm get-parameter --name /kadir/capstone/token --with-decryption --query 'Parameter.Value' --output text)
 #git clone https://$TOKEN@github.com/<yourreponame>/aws-capstone-project.git
-git clone https://$TOKEN@github.com/betul-kaplan/betul-capstone.git
+git clone https://$TOKEN@github.com/kadirizm35/kadir-capstone.git
 #cd /home/ubuntu/aws-capstone-project
-cd /home/ubuntu/betul-capstone
+cd /home/ubuntu/kadir-capstone
 apt-get install python3.10-dev default-libmysqlclient-dev -y
 pip3 install -r requirements.txt
 #cd /home/ubuntu/aws-capstone-project/src
-cd /home/ubuntu/betul-capstone/src
+cd /home/ubuntu/kadir-capstone/src
 python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python3 manage.py migrate
